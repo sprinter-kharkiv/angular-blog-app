@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
-import { AppState } from "../../../../app.state";
-import { Tutorial } from "../../../../store/models/tutorial.model";
+import * as fromRoot from '../../../../store/reducers';
+import * as postSelectors from '../../../../store/selectors/post.selector';
+
 
 
 @Component({
@@ -13,10 +14,13 @@ import { Tutorial } from "../../../../store/models/tutorial.model";
 export class PostsListComponent implements OnInit {
 
   posts;
+  tutorials;
+  // tutorials: Observable<State>;
 
-  tutorials: Observable<Tutorial[]>;
-  constructor(private store: Store<AppState>) {
-    this.tutorials = store.select('tutorial');
+  constructor(
+    private store: Store<fromRoot.State>,
+  ) {
+    // this.tutorials = store.select('tutorial');
     // this.posts = http.get("https://jsonplaceholder.typicode.com/posts");
   }
 
@@ -25,7 +29,10 @@ export class PostsListComponent implements OnInit {
   }
 
   getPosts() {
-
+    this.store.select(state => state.post).subscribe((data) => {
+      this.posts = postSelectors.getEntities(data);
+      console.log('POSTS', this.posts)
+    });
   }
 
 }

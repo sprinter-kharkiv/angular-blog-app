@@ -2,7 +2,10 @@ import { Action } from '@ngrx/store'
 import { Tutorial } from './../models/tutorial.model'
 import * as TutorialActions from './../actions/tutorial.actions'
 
-// Section 1
+export interface State {
+  entities: Tutorial[];
+}
+
 const initialState: Tutorial = {
   name: 'Initial Tutorial',
   url: 'http://google.com'
