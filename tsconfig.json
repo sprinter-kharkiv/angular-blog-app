@@ -14,6 +14,15 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "paths": {
+      "@app/*": ["app/*"],
+      "@services/*": ["app/services/*"],
+      "@shared/*": ["app/modules/shared/*"],
+      "@assets/*": ["assets/*"],
+      "@env/*": ["environments/*"],
+      "@store/*": ["app/store/*"],
+      "@testing/*": ["testing/*"]
+    },
     "lib": [
       "es2018",
       "dom"
