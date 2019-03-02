@@ -1,0 +1,81 @@
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #323232;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+.container--main {
+  padding-top: calc(20px + 3vw);
+  padding-bottom: calc(20px + 3vw);
+}
+
+.home {
+  min-height: calc(100vh - 86px);
+  background-image: url("http://s1.1zoom.me/big0/283/Ukraine_Mountains_Houses_511399.jpg");
+  background-size: cover;
+}
+
+.jumbotron--home {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.post {
+  padding: 20px;
+  min-height: calc(100% - 1rem);
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+
+  &__header {
+    transition: color .2s;
+    &:hover {
+      color: #28a745;
+      cursor: pointer;
+    }
+  }
+
+}
+.comment {
+  padding: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+
+  & + & {
+    margin-top: calc(15px + 1.5vw);
+  }
+  &__title {
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__footer {
+    font-size: 0.9em;
+    opacity: .6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

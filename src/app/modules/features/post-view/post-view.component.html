@@ -1,0 +1,24 @@
+<div class="container container--main">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ post.title }}</h1>
+      <h4>
+        <small class="text-muted">Author: </small>
+        <span>{{ post.userDetail?.name }}</span>
+      </h4>
+      <p class="mb-5">{{ post.body }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h5>Comments ({{ post.comments?.length }})</h5>
+      <div *ngFor="let comment of post.comments" class="comment">
+        <h3 class="comment__title">{{ comment.name }}</h3>
+        <p class="comment__text">{{ comment.body }}</p>
+        <footer class="comment__footer">
+          <span>{{ userObj[post.userDetail?.id]?.name }} <a href="mailto:{{ comment.email }}">{{ comment.email }}</a></span>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>

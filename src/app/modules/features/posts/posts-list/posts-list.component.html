@@ -1,5 +1,22 @@
-
-<h2>all posts:</h2>
-<p *ngFor="let post of posts">Title: {{ post.title }}</p>
-
-<app-create></app-create>
+<div class="container container--main">
+    <h1 class="text-center mb-4">Latest posts</h1>
+    <div class="row">
+        <div *ngFor="let post of posts " class="col-md-6 col-lg-4 col-xl-3">
+            <div class="post mb-3">
+                <div [routerLink]="['/post', post.id]" class="post__header">
+                    <h5>{{ post.title }}</h5>
+                </div>
+                <div class="post__body">
+                    <p class="post__text">{{ post.body }}</p>
+                    <h6>
+                        <small class="text-muted">Author: </small>
+                        <a [routerLink]="['/posts', post.userId]">{{ userObj[post.userId]?.name }}</a>
+                    </h6>
+                    <p class="post__footer">
+                        <small class="text-muted">Comments: {{ comments[post.id]?.length }}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
