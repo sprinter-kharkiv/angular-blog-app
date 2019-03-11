@@ -20,8 +20,7 @@
       "@shared/*": ["app/modules/shared/*"],
       "@assets/*": ["assets/*"],
       "@env/*": ["environments/*"],
-      "@store/*": ["app/store/*"],
-      "@testing/*": ["testing/*"]
+      "@store/*": ["app/store/*"]
     },
     "lib": [
       "es2018",

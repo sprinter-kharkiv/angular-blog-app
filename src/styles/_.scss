@@ -1,0 +1,44 @@
+@import "/variables";
+
+@font-face {
+  font-family: 'adriane_textregular';
+  src: url('./assets/fonts/adriane/adriane_text_regular-webfont.woff2') format('woff2'),
+  url('./assets/fonts/adriane/adriane_text_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  color: $text_clr;
+  font-family: adriane_textregular, Georgia, Cambria,"Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+.card {
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #fff;
+}

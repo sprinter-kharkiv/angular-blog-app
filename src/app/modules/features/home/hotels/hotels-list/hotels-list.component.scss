@@ -1,0 +1,23 @@
+.hotel {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover, &.active {
+    background-color: #fff;
+  }
+  &__img {
+    flex-basis: 30%;
+    margin-right: 2%;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__detail {
+    line-height: 1.4;
+  }
+}

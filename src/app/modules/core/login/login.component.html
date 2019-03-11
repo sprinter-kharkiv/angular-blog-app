@@ -1,0 +1,15 @@
+<div class="wrap">
+  <form class="form">
+    <h1>Login</h1>
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="Input">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

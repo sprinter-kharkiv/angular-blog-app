@@ -1,0 +1,53 @@
+@import "../../../../styles/variables";
+//@import "styles/variables.scss";
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: $radius_containers;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.main-nav {
+  display: flex;
+  &__link {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    color: $text_clr;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .3s;
+
+    &.active {
+      background-color: $white_clr;
+    }
+
+    &:hover {
+      background-color: $white_clr;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    color: $text_clr;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .3s;
+
+    &.active {
+      background-color: $white_clr;
+    }
+
+    &:hover {
+      background-color: $white_clr;
+    }
+  }
+}

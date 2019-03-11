@@ -1,0 +1,20 @@
+<div *ngFor="let hotel of hotels" (click)="selectHotel(hotel)">
+  <div class="hotel" [ngClass]="{'active': hotel.id === selected }">
+    <div class="hotel__img">
+      <img src="{{ hotel.picture }}" alt="picture of the hotel">
+    </div>
+    <div class="hotel__detail">
+      <div class="hotel__name">{{ hotel.title }}</div>
+      <div class="hotel__address">{{ hotel.address }}</div>
+      <div class="hotel__phone">{{ hotel.phone }}</div>
+      <div class="hotel__comment">{{ hotel.description }}</div>
+      <div class="hotel__photos">
+        <div *ngFor="let path of hotel.photos">
+          <p>{{ path }}</p>
+          <!--<img src=""  alt="photo of the hotel">-->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostsListComponent } from "./modules/features/posts/posts-list/posts-list.component";
-import { PostViewComponent } from "./modules/features/post-view/post-view.component";
-import { HomeComponent } from "./modules/features/home/home.component";
+
+import { LoginComponent } from "./modules/core/login/login.component";
+
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: './modules/features/home/home.module#HomeModule',
   },
   {
-    path: 'posts/:id',
-    component: PostsListComponent,
+    path: 'login',
+    loadChildren: './modules/core/login/login.module#LoginModule',
   },
   {
-    path: 'post/:id',
-    component: PostViewComponent,
+    path: 'registration',
+    loadChildren: './modules/core/registration/registration.module#RegistrationModule',
   }
 ];
 

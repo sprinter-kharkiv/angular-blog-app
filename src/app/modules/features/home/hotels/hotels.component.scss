@@ -1,0 +1,16 @@
+.hotels {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%;
+}
+.hotels-list {
+  width: 58%;
+  margin-right: 2%;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  width: 40%;
+  background-color: #f9f9f9;
+}

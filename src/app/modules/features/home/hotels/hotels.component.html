@@ -1,0 +1,14 @@
+<h1>Hotels:</h1>
+<section class="hotels">
+  <div class="hotels-list">
+    <app-hotels-list
+      [hotels]="hotels"
+      [selected]="selectedHotel"
+      (changeSelection)="changeSelection($event)">
+    </app-hotels-list>
+  </div>
+  <div class="sidebar">
+    <app-weather-widget [selected]="selectedHotel" [weather]="weather"></app-weather-widget>
+    <app-hotel-profile [profile]="profile[selectedHotel]"></app-hotel-profile>
+  </div>
+</section>
